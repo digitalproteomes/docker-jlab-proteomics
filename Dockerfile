@@ -1,7 +1,7 @@
 FROM jupyter/datascience-notebook
 
 LABEL maintainer="Patrick Pedrioli"
-LABEL Description="A JupyterLab proteomics data analysis"
+LABEL Description="A JupyterLab for proteomics data analysis"
 
 ################################
 ## Add some jupyterlab extensions
