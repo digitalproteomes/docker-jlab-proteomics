@@ -3,3 +3,11 @@ pyteomics
 pandas-profiling
 scikit-posthocs
 fastcluster
+omnipath
+pypath
+plotly
+openpyxl
+upsetplot
+pycombat
+lxml
+goatools

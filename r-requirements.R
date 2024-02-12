@@ -5,7 +5,7 @@ require(devtools)
 install_version("foreign", version="0.8-70")
 
 # Add BioConductor dependencies here
-bioc_deps <- c("MSstats", "proBatch", "SWATH2stats")
+bioc_deps <- c("MSstats", "proBatch", "SWATH2stats","OmnipathR")
 
 # Add CRAN dependencies here
 cran_deps <- c("ggdendro", "ggpubr", "aLFQ", "ggthemes", "grImport", "roxygen2")
