@@ -1,7 +1,7 @@
-FROM jupyter/datascience-notebook:2023-02-20
+FROM quay.io/jupyter/datascience-notebook:2025-03-25
 
 LABEL maintainer="Patrick Pedrioli"
-LABEL Description="A JupyterLab for proteomics data analysis"
+LABEL Description="A JupyterLab for LUX data analysis"
 
 
 #################
@@ -48,7 +48,22 @@ COPY requirements.txt /tmp/
 
 RUN while read requirement; do pip install $requirement; done < /tmp/requirements.txt
 
+# seaborn has been compiled witht numpy 1.x and cannot be run with numpy 2.x
+RUN pip uninstall numpy -y \
+    && pip install "numpy<2.0"
+
 
 # This breaks Ctrl-V paste shortcut
 # But you can use Ctrl-shift-v instead
 #RUN jupyter labextension install jupyterlab-emacskeys
+
+COPY --chown=jovyan:users dousatsu /tmp/dousatsu
+RUN rm -rf /tmp/dousatsu/.git \
+    && rm /tmp/dousatsu/.gitignore \
+    && pip install /tmp/dousatsu
+
+COPY --chown=jovyan:users lux_noctis /tmp/lux_noctis
+RUN rm -rf /tmp/lux_noctis/.git \
+    && pip install /tmp/lux_noctis
+
+RUN chmod -R o+rxw /home/jovyan

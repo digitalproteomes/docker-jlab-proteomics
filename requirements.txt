@@ -11,3 +11,4 @@ upsetplot
 pycombat
 lxml
 goatools
+papermill[all]
