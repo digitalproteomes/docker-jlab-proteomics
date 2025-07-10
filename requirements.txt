@@ -8,7 +8,7 @@ pypath
 plotly
 openpyxl
 upsetplot
-pycombat
+inmoose
 lxml
 goatools
 papermill[all]
