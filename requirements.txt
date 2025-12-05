@@ -1,5 +1,5 @@
 biopython
-pyteomics
+git+https://github.com/levitsky/pyteomics.git@d9309e5
 pandas-profiling
 scikit-posthocs
 fastcluster
