@@ -1,0 +1,19 @@
+{
+ "argv": [
+  "/opt/conda/bin/python",
+  "-m",
+  "ipykernel_launcher",
+  "-f",
+  "{connection_file}",
+  "--IPKernelApp.shell_port=0",
+  "--IPKernelApp.iopub_port=0",
+  "--IPKernelApp.stdin_port=0",
+  "--IPKernelApp.control_port=0",
+  "--IPKernelApp.hb_port=0"
+ ],
+ "display_name": "Python 3 Parallel (ipykernel)",
+ "language": "python",
+ "metadata": {
+  "debugger": true
+ }
+}
