@@ -57,15 +57,6 @@ RUN pip uninstall numpy -y \
 # But you can use Ctrl-shift-v instead
 #RUN jupyter labextension install jupyterlab-emacskeys
 
-COPY --chown=jovyan:users dousatsu /tmp/dousatsu
-RUN rm -rf /tmp/dousatsu/.git \
-    && rm /tmp/dousatsu/.gitignore \
-    && pip install /tmp/dousatsu
-
-COPY --chown=jovyan:users lux_noctis /tmp/lux_noctis
-RUN rm -rf /tmp/lux_noctis/.git \
-    && pip install /tmp/lux_noctis
-
 RUN chmod -R o+rxw /home/jovyan
 
 COPY --chown=jovyan:users python3_parallel /opt/conda/share/jupyter/kernels/python3_parallel

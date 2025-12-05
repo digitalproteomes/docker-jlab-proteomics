@@ -12,3 +12,5 @@ inmoose
 lxml
 goatools
 papermill[all]
+dousatsu
+lux_noctis
