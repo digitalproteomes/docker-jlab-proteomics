@@ -67,3 +67,5 @@ RUN rm -rf /tmp/lux_noctis/.git \
     && pip install /tmp/lux_noctis
 
 RUN chmod -R o+rxw /home/jovyan
+
+COPY --chown=jovyan:users python3_parallel /opt/conda/share/jupyter/kernels/python3_parallel
